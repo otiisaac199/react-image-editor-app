@@ -1,0 +1,41 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.app_container {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: 1fr auto;
+  grid-template-areas: "image sidebar" "slider sidebar";
+  height: 100vh;
+  width: 100%;
+  background-color: #dadada;
+}
+
+.main_image {
+  grid-area: image;
+  background: pink;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background: rgb(93, 187, 255);
+  border-left: 1px solid rgb(0, 149, 255);
+}
+
+.slider_container {
+  grid-area: slider;
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+.slider {
+  cursor: pointer;
+  width: 100%;
+}
